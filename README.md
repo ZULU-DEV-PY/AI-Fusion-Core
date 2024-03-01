@@ -23,7 +23,7 @@ Clonar el Repositorio
 
 bash
 Copy code
-git clone https://github.com/usuario/AIFusionCore.git
+git clone [https://github.com/usuario/AIFusionCore.git](https://github.com/ZULU-DEV-PY/AI-Fusion-Core)
 cd AIFusionCore
 Instalar Dependencias
 
@@ -60,7 +60,7 @@ Actuador.py: Contiene la clase Actuador y sus clases hijas (por ejemplo, Actuado
 Controlador.py: Contiene la clase Controlador que se encarga de leer los sensores, procesar la información y enviar comandos a los actuadores.
 Interfaz.py: Contiene la clase Interfaz que se encarga de la visualización del estado del mundo y la interacción con el usuario.
 Ejemplo de estructura de archivos:
-
+bash
 ├── entidades
 │   ├── entidad.py
 │   └── persona.py
@@ -79,6 +79,7 @@ sensores
 actuadores
 ├── actuador.py
 └── actuador_motor.py
+
 controlador.py
 interfaz.py
 Importación de las clases:
@@ -86,6 +87,7 @@ Importación de las clases:
 En la clase Interfaz se importan las clases que se necesitan para la visualización del mundo y la interacción con el usuario.
 
 Python
+bash
 from entidades import Persona, Objeto
 from relaciones import Amistad, Cercania
 from mundo import Mundo
@@ -99,7 +101,7 @@ Nota:
 Esta es una estructura de ejemplo, puedes adaptarla a las necesidades de tu proyecto.
 
 
-desarrolla la Referencia API: Documentación de clases, métodos y parámetros.
+Ejemplo de como se desarrolla la Referencia API: Documentación de clases, métodos y parámetros.
 Referencia API: Documentación de Clases, Métodos y Parámetros
 Clase Entidad:
 
@@ -112,19 +114,21 @@ Atributos:
 nombre: El nombre de la entidad.
 id: El identificador único de la entidad.
 estado: Un diccionario que contiene el estado actual de la entidad.
+
 Métodos:
 
 __init__(self, nombre): Constructor de la clase Entidad.
 obtener_id(self): Obtiene el identificador de la entidad.
 obtener_estado(self): Obtiene el estado actual de la entidad.
+
 Ejemplo:
 
-Python
+bash
 entidad = Entidad("Persona")
 print(entidad.nombre)  # Salida: "Persona"
 print(entidad.obtener_id())  # Salida: "Persona_1234"
 print(entidad.obtener_estado())  # Salida: {"edad": 25, "posicion": (10, 20)}
-Usa el código con precaución.
+
 Clase Persona:
 
 Descripción:
@@ -137,19 +141,21 @@ nombre: El nombre de la persona.
 id: El identificador único de la persona.
 edad: La edad de la persona.
 posicion: La posición actual de la persona.
+
 Métodos:
 
 __init__(self, nombre, edad, posicion): Constructor de la clase Persona.
 obtener_id(self): Obtiene el identificador de la persona.
 obtener_estado(self): Obtiene el estado actual de la persona.
+
 Ejemplo:
 
-Python
+bash
 persona = Persona("Juan", 25, (10, 20))
 print(persona.nombre)  # Salida: "Juan"
 print(persona.obtener_id())  # Salida: "Persona_1234"
 print(persona.obtener_estado())  # Salida: {"edad": 25, "posicion": (10, 20)}
-Usa el código con precaución.
+
 Clase Relacion:
 
 Descripción:
@@ -162,20 +168,22 @@ entidad1: La primera entidad de la relación.
 entidad2: La segunda entidad de la relación.
 id: El identificador único de la relación.
 tipo: El tipo de la relación.
+
 Métodos:
 
 __init__(self, entidad1, entidad2): Constructor de la clase Relacion.
 obtener_id(self): Obtiene el identificador de la relación.
 obtener_tipo(self): Obtiene el tipo de la relación.
+
 Ejemplo:
 
-Python
+bash
 persona1 = Persona("Juan", 25, (10, 20))
 persona2 = Persona("Maria", 28, (20, 30))
 relacion = Amistad(persona1, persona2)
 print(relacion.obtener_id())  # Salida: "Amistad_1234"
 print(relacion.obtener_tipo())  # Salida: "Amistad"
-Usa el código con precaución.
+
 Clase Amistad:
 
 Descripción:
@@ -188,6 +196,7 @@ entidad1: La primera persona de la amistad.
 entidad2: La segunda persona de la amistad.
 id: El identificador único de la amistad.
 tipo: El tipo de la relación (en este caso, "Amistad").
+
 Métodos:
 
 __init__(self, persona1, persona2): Constructor de la clase Amistad.
@@ -195,13 +204,13 @@ obtener_id(self): Obtiene el identificador de la amistad.
 obtener_tipo(self): Obtiene el tipo de la relación.
 Ejemplo:
 
-Python
+bash
 persona1 = Persona("Juan", 25, (10, 20))
 persona2 = Persona("Maria", 28, (20, 30))
 amistad = Amistad(persona1, persona2)
 print(amistad.obtener_id())  # Salida: "Amistad_1234"
 print(amistad.obtener_tipo())  # Salida: "Amistad"
-Usa el código con precaución.
+
 Clase Mundo:
 
 Descripción:
@@ -228,9 +237,10 @@ simular(self, tiempo_simulacion): Simula la dinámica del mundo durante un tiemp
 aplicar_reglas(self): Aplica las reglas del mundo al estado actual.
 obtener_estado(self): Obtiene el estado actual del mundo.
 generar_observacion(self): Genera una observación del mundo.
+
 Ejemplo:
 
-Python
+bash
 mundo = Mundo()
 persona1 = Persona("Juan", 25, (10, 20))
 persona2 = Persona("Maria", 28, (20, 30))
@@ -244,7 +254,7 @@ mundo.simular(10)
 estado_mundo = mundo.obtener_estado()
 
 print(estado_mundo)  # Salida: {"entidades": {"Persona_1234": {"nombre": "Juan", "edad": 25, "posicion": (10, 20)}, "Persona_4567": {"nombre": "Maria", "edad": 28, "posicion": (20, 30)}}, "relaciones": {"Amistad_1234": {"entidad1": "Persona_1234", "entidad2": "Persona_4567", "tipo": "Amistad"}}}
-Usa el código con precaución.
+
 Clase Regla:
 
 Descripción:
@@ -261,7 +271,7 @@ __init__(self, condiciones, acciones): Constructor de la clase Regla.
 evaluar(self, mundo): Evalúa si la regla se cumple en el estado actual del mundo.
 Ejemplo:
 
-Python
+bash
 class ReglaPersonaMayorDeEdad(Regla):
 
     def __init__(self):
@@ -298,7 +308,7 @@ preprocesar_datos(self, datos): Preprocesa los datos leídos por el sensor.
 
 Ejemplo:
 
-Python
+bash
 class SensorCamara(Sensor):
 
     def __init__(self):
@@ -322,7 +332,8 @@ datos_preprocesados = sensor_camara.preprocesar_datos(datos_camara)
 print(datos_preprocesados)  # Salida: {"objetos": ["Persona", "Coche"], "posiciones": {"Persona": (10, 20), "Coche
 
 
-Continuación de la Referencia API: Documentación de Clases, Métodos y Parámetros
+Documentación de Clases, Métodos y Parámetros
+
 Clase Actuador:
 
 Descripción:
@@ -379,7 +390,7 @@ ejecutar_ciclo_control(self): Ejecuta un ciclo de control continuo.
 
 Ejemplo:
 
-Python
+bash
 mundo = Mundo()
 sensor_camara = SensorCamara()
 actuador_motor = ActuadorMotor()
@@ -401,7 +412,6 @@ while True:
     comandos = controlador.generar_comandos(decisiones)
     controlador.enviar_comandos(comandos)
 
-
 Clase Interfaz:
 
 Descripción:
@@ -416,9 +426,10 @@ Métodos:
 
 __init__(self, mundo, controlador): Constructor de la clase Interfaz.
 actualizar(self): Actualiza la interfaz gráfica de usuario.
+
 Ejemplo:
 
-Python
+bash
 class Interfaz:
 
     def __init__(self, mundo, controlador):
@@ -441,3 +452,5 @@ while True:
     interfaz.actualizar()
 
     # ... (resto del código del bucle principal)
+
+Continuara...
